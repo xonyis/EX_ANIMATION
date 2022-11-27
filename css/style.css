@@ -7,7 +7,7 @@
     --s-color: #db4141;
     --t-color: #8d3b8d;
     --f-color: #bf69b1;
-
+    --car-space : 75px
 }
 /* MENU DESCENDANT */
 
@@ -34,7 +34,7 @@
     align-items: center;
     justify-content: space-evenly;
     width: 90%;
-    height: 300vh;
+    height: 500vh;
     margin: auto;
     text-align: center;
     margin-top: 100px;
@@ -137,15 +137,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .queu-container {
-    position: relative;
-    border: 2px solid black;
-    width: 500px;
+    /* background: #000; */
+    width: 95%;
     height: 90%;
-    margin-top: 2.5%;
+    position: relative;
 }
+
 
 .queu-container h2{
     position: absolute;
@@ -189,18 +190,20 @@
         
     }
     20%{
-        transform: translateX(475px);
+        transform: translateX(475px) rotate(360deg);
+        
     }
     50%{
+        /* transform: rotate(1080deg); */
         transform: translate(475px, 330px);
     }
     70%{
         
-        transform: rotate(360deg);
-        transform: translate(0px, 330px);
+        /* transform: rotate(1440deg); */
+        transform: translate(0px, 330px) rotate(360deg);
     }
     to {
-        
+        transform: rotate(360deg);
         transform: translate(0px);  
     }
 }
@@ -253,3 +256,99 @@
         }
 }
 
+/* ==================== */
+
+.div5 {     
+    border-radius: 20px; 
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    width: 600px;
+    height: 600px;
+    perspective: 1000px;
+    /* perspective-origin: 50% -0%; */
+    
+}
+
+
+#carousel-container {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -110px;
+    transform-style: preserve-3d;
+    display: flex;
+    animation: moveCarousel 5s ease-in-out infinite;
+    /* background: rgba(0, 0, 0, 0.24); */
+    padding: 100px;
+}
+
+@keyframes moveCarousel {
+    from {
+        transform: rotateY(0deg);
+        
+
+    }
+    25% {
+        transform: translate(350px,0px);
+    }
+    50% {
+        transform: translate(0px,350px);
+
+    }
+    75% {
+        transform: translate(-350px,0px);
+
+    }
+
+    to {
+        transform: rotateY(360deg);
+        transform: translate(0px,-350px);
+
+
+    }
+}
+
+
+
+#carousel-container div {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 10px;
+    top: 10px;
+    border: 2px solid black;
+    margin: 50%;
+    margin-top: 10em;
+}
+
+
+
+#carousel-container div:nth-child(1) {
+    transform: rotateY(0deg) translateZ(var(--car-space));
+
+}
+#carousel-container div:nth-child(2) {
+    transform: rotateY(40deg) translateZ(var(--car-space));
+}
+#carousel-container div:nth-child(3) {
+    transform: rotateY(80deg) translateZ(var(--car-space));
+}
+#carousel-container div:nth-child(4) {
+    transform: rotateY(120deg) translateZ(var(--car-space));
+}
+#carousel-container div:nth-child(5) {
+    transform: rotateY(160deg) translateZ(var(--car-space));
+}
+#carousel-container div:nth-child(6) {
+    transform: rotateY(200deg) translateZ(var(--car-space));
+}
+#carousel-container div:nth-child(7) {
+    transform: rotateY(240deg) translateZ(var(--car-space));
+}
+#carousel-container div:nth-child(8) {
+    transform: rotateY(280deg) translateZ(var(--car-space));
+}
+#carousel-container div:nth-child(9) {
+    transform: rotateY(320deg) translateZ(var(--car-space));
+}
