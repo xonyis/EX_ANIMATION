@@ -272,56 +272,52 @@
 
 
 #carousel-container {
-    width: 30px;
     height: 30px;
     position: absolute;
-    top: -110px;
     transform-style: preserve-3d;
     display: flex;
-    animation: moveCarousel 5s ease-in-out infinite;
+    animation: moveCarousel 10s linear infinite;
     /* background: rgba(0, 0, 0, 0.24); */
     padding: 100px;
+
 }
 
 @keyframes moveCarousel {
     from {
-        transform: rotateY(0deg);
+
+    }
+    25%{
+        transform: translateX(350px) rotate3d(1, 1, -1, 180deg); 
+    }
+    50%{
+        /* transform: translate(0px,350px); */
+        transform: translate(350px, 350px) rotate3d(1, 1, 1, 360deg);
+
+    }
+    70%{
         
-
-    }
-    25% {
-        transform: translate(350px,0px);
-    }
-    50% {
-        transform: translate(0px,350px);
-
+        /* transform: rotate(1440deg); */
+        transform: translate(0px, 350px) rotate3d(1, 1, 1, 540deg);
     }
     75% {
-        transform: translate(-350px,0px);
 
     }
 
-    to {
-        transform: rotateY(360deg);
-        transform: translate(0px,-350px);
-
-
+    to {   
+        transform: translate(0px,0px) rotate3d(1, 1, 1, 720deg);
     }
 }
 
-
-
 #carousel-container div {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     left: 10px;
     top: 10px;
     border: 2px solid black;
     margin: 50%;
-    margin-top: 10em;
+    margin-top: 5em;
 }
-
 
 
 #carousel-container div:nth-child(1) {
