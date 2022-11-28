@@ -13,7 +13,7 @@
 
 .hvr-container {
     position: absolute;
-    background: #000;
+    background: var(--bg-color);
     border-radius: 50px;
     height: 3em;
     width: 175px;
@@ -22,10 +22,27 @@
     display: flex;
     transition: ease 1s;
 }
-
-.hvr-container:hover {
-    height: 30em;
+.hvr-container ul {
+    display: none;
+    margin-top: 2em;
+    line-height: 1em;
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 1.2em;
 }
+.hvr-container:hover{
+    height: 15em;
+}
+
+.hvr-container:hover p {
+   display: none;
+}
+
+.hvr-container:hover ul,a {
+    display: block;
+    color: #252525;
+}
+
 
 /* =================== */
 .exo-container {
@@ -34,12 +51,12 @@
     align-items: center;
     justify-content: space-evenly;
     width: 90%;
-    height: 500vh;
+    height: 350vh;
     margin: auto;
     text-align: center;
     margin-top: 100px;
 }
-
+/* ===================== */
 /* LE CARRÉ QUI TOURNE */
 .div1 { 
     border-radius: 20px; 
