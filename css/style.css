@@ -77,14 +77,14 @@
 }
 
 @keyframes sqr-rotate {
-    15% { background-color: #db4141; } 
-    30% { background-color: #812479; } 
-    45% { background-color: #8d3b8d; }
+    15% { background-color: #FF99C8; } 
+    30% { background-color: #FCF6BD; } 
+    45% { background-color: #D0F4DE; }
     50% {
       transform: rotate(360deg);
     }
-    60% { background-color: #bf69b1; } 
-    75% { background-color: #97D8B2; }
+    60% { background-color: #A9DEF9; } 
+    75% { background-color: #E4C1F9; }
     to {
         transform: rotate(-360deg);
     }
@@ -339,29 +339,37 @@
 
 #carousel-container div:nth-child(1) {
     transform: rotateY(0deg) translateZ(var(--car-space));
-
+    background-color: #FF99C8;
 }
 #carousel-container div:nth-child(2) {
     transform: rotateY(40deg) translateZ(var(--car-space));
+    background-color: #FCF6BD;
 }
 #carousel-container div:nth-child(3) {
     transform: rotateY(80deg) translateZ(var(--car-space));
+    background-color: #D0F4DE;
 }
 #carousel-container div:nth-child(4) {
     transform: rotateY(120deg) translateZ(var(--car-space));
+    background-color: #A9DEF9;
 }
 #carousel-container div:nth-child(5) {
     transform: rotateY(160deg) translateZ(var(--car-space));
+    background: #E4C1F9;
 }
 #carousel-container div:nth-child(6) {
     transform: rotateY(200deg) translateZ(var(--car-space));
+    background-color: #FF99C8;
 }
 #carousel-container div:nth-child(7) {
     transform: rotateY(240deg) translateZ(var(--car-space));
+    background-color: #FCF6BD;
 }
 #carousel-container div:nth-child(8) {
     transform: rotateY(280deg) translateZ(var(--car-space));
+    background-color: #D0F4DE;
 }
 #carousel-container div:nth-child(9) {
     transform: rotateY(320deg) translateZ(var(--car-space));
+    background-color: #A9DEF9;
 }
